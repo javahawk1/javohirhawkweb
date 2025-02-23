@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #cce5ff;
+    font-family: "Baloo Paaji 2", "cursive";
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    padding: 0 15%;
+}
+
+.nav_box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #cce5ff;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.nav_col {
+    display: flex;
+    align-items: center;
+}
+.nav_img {
+    width: 50px;
+}
+
+.nav_col a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: 600;
+}
+
+.nav_link {
+    margin-left: 40px;
+}
+
+.nav_col a:hover {
+    color: #003f7f;
+}
+
+.nav_col a:active {
+    color: #003f7f;
+}
+
+.navbar.scrolled_1 {
+    transform: translateY(-200%);
+    opacity: 0;
+}
+
+.navbar.scrolled_2 {
+    top: 10px;
+    position: fixed;
+    transform: translateY(0);
+    opacity: 1;
+    background-color: inherit;
+    left: 15%;
+    right: 15%;
+    padding: 0;
+    border-radius: 20px;
+}
+
+.nav_icon {
+    width: 50px;
+    height: 45px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav_hidden {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+}
+
+.nav_hidden a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.hidden_icon {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+}
+
+.hidden_links {
+    font-family: "Baloo Paaji 2", "cursive";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20%;
+    height: 100%;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.hidden_icon_2 {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.dis_none {
+    display: none;
+}

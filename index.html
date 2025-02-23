@@ -3,54 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" href="photos/hawk-removebg-preview.png">
     <title>Javokhir - Main</title>
 </head>
 <body>
-    <div class="container">
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav_box">
+          <div class="nav_col nav_col_1">
+              <a href="#"><img class="nav_img" src="./photos/hawk-removebg-preview.png" alt="rasm"></a>
+              <a class="nav_link" href="#">Main</a>
+              <a class="nav_link" href="#">About me</a>
+          </div>
+          <div class="nav_col">
+              <a class="nav_link" style="margin-right: 20px;" href="#">Personal Page</a>
+              <img id="hide_btn" class="nav_icon" src="photos/0ae39753-7d58-44be-b20d-ff17f8954b42_removalai_preview.png" alt="rasm">
+          </div> 
+      </div>     
+      </nav>
+      <div class="nav_hidden dis_none">
+          <div class="hidden_links">
+              <a href="#">Main</a>
+              <a href="#">About me</a>
+              <a href="#">Personal Page</a>
+          </div>
+          <img class="hidden_icon" id="hide_btn" src="photos/close.png" alt="rasm">
+          <img class="hidden_icon_2" src="./photos/hawk-removebg-preview.png" alt="rasm">
+      </div>  
+
+      <!-- Navbar -->
+    
+    <div class="container">     
       <div class="box">
-        <!-- Navbar -->
-        <nav class="navbar">
-          <div class="nav_box">
-            <a href="#">
-              <img src="photos/hawk-removebg-preview.png" alt="logo photo" width="50">
-            </a>
-            <ul class="ul_items">
-              <li class="ul_item"><a href="#" class="active_link">Main</a></li>
-              <li class="ul_item"><a href="#">Contact me</a></li>
-            </ul>
+        <div id="about_me">
+          <!-- Main section -->
+          <div class="main_box">
+            <h1 class="main_title">Hi!<br> I am <br> Javokhir</h1>
           </div>
-          <ul class="ul_items">
-            <li class="ul_item"><a href="#">Personal Page</a></li>
-          </ul>
-        </nav>
-        <!-- Navbar -->
-
-        <!-- Main Section -->
-         <section class="main_section" id="main_section">
-          <div class="main_row">
-            <div class="main_col-1">
-              <img class="main_photo" src="" alt="javokhir photo">
+          <section class="main_section" id="main_section">
+            <div class="main_row">
+              <div class="main_col-1">
+                <img class="main_photo" src="photos/javokhir.png" alt="javokhir photo">
+              </div>
+              <div class="main_col-2">
+                <div>
+                  <h4>Men kimman?</h4>
+                  <h3 class="main_about">Men haqimda</h3>
+                  <p class="about_p">Men Javokhir 2008 yil 15-dekabrda Toshkent viloyati Yangiyol shahrida tavalud topganman. Men Middle dasturchman!.Python, Html, Css, Js, Django, Bootstrap, Photoshop kabilarni bilaman!</p>
+                  <button class="about_button">Contact me</button>
+                </div>
+              </div>
             </div>
-            <div class="main_col-2">
-              <h3 class="main_about">About Me</h3>
-              <p>My name's Javokhir.</p>
-              <p>I was born in 2008.</p>
-              <p>I live in Tashkent, Uzbekistan.</p>
-              <p>Github: <a href="https://github.com/javahawk1">https://github.com/javahawk1</a></p>
-              <p>Gmail: djakhadeveloper@gmail.com</p>
-              <iframe class="main_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191884.8398712116!2d69.11455620810692!3d41.2827379463425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2z0KLQsNGI0LrQtdC90YIsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1740186718341!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            </div>
-          </div>
-         </section>
-        <!-- Main Section -->
+          </section>
+          <!-- About me Section -->
+        </div>
       </div>
     </div>
 
     <canvas id="canvas"></canvas>
-    <script src="js/background.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let dots = [];
-const dotCount = 100;
+const dotCount = 50;
 const maxDistance = 150;
 const mouse = { x: null, y: null, radius: 100 };
 
@@ -25,15 +25,32 @@ class Dot {
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * 1;
         this.vy = (Math.random() - 0.5) * 1;
+        this.originalVx = this.vx;
+        this.originalVy = this.vy;
         this.radius = Math.random() * 3 + 2;
     }
     
     move() {
+        let dx = this.x - mouse.x;
+        let dy = this.y - mouse.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance < mouse.radius) {
+            let angle = Math.atan2(dy, dx);
+            this.vx = Math.cos(angle) * 2;
+            this.vy = Math.sin(angle) * 2;
+        } else {
+            this.vx += (this.originalVx - this.vx) * 0.05;
+            this.vy += (this.originalVy - this.vy) * 0.05;
+        }
+        
         this.x += this.vx;
         this.y += this.vy;
         
-        if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1;
-        if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1;
+        if (this.x < 0) this.x = canvas.width;
+        if (this.x > canvas.width) this.x = 0;
+        if (this.y < 0) this.y = canvas.height;
+        if (this.y > canvas.height) this.y = 0;
     }
     
     draw() {
@@ -88,3 +105,30 @@ window.addEventListener("resize", () => {
 
 createDots();
 animate();
+
+// Navbar
+
+const navbar = document.getElementById("navbar");
+const hide_btn = document.querySelectorAll("#hide_btn")
+const nav_hidden = document.querySelector(".nav_hidden")
+
+hide_btn.forEach(button => {
+    button.addEventListener("click", function() {
+        nav_hidden.classList.toggle('dis_none')
+    });
+});
+
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 1) {
+        navbar.classList.add("scrolled_1");
+    } else {
+        navbar.classList.remove("scrolled_1");
+    }
+
+    if (window.scrollY > 300) {
+        navbar.classList.add("scrolled_2");
+    } else {
+        navbar.classList.remove("scrolled_2");
+    }
+});

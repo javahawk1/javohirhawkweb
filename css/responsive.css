@@ -1,0 +1,46 @@
+@media screen and (max-width: 600px) {
+    .nav_link {
+        display: none;
+    }
+
+    .nav_icon {
+        display: block;
+    }
+
+    .main_row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main_col-1 {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .main_col-2 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .box {
+        width: 100%;
+    }
+    .navbar {
+        padding: 0;
+    }
+    .main_title {
+        padding: 0
+    };
+}
+
+@media screen and (max-width: 1100px) {
+    .about_p {
+        font-size: 15px !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .box {
+        width: 90%;
+    }
+}

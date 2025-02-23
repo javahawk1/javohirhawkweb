@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 body {
     background: #0a0f25;
-    font-family: "roboto", sans-serif;
+    font-family: 'Baloo Paaji 2', cursive;
 }
 canvas {
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -22,19 +23,23 @@ canvas {
 /* Navbar */
 .box {
     width: 70%;
-    border: 2px solid #cce5ff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 1px #cce5ff;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #cce5ff;
-    border-radius: 10px;
+    position: sticky;
+    left: 0;
+    right: 0;
+}
+
+.navbar_ {
+    display: flex;
+    justify-content: space-between;
     font-size: 15px;
-    padding: 5px 40px;
+    padding: 5px;
+    width: 70%;
     user-select: none;
 }
 
@@ -69,12 +74,22 @@ canvas {
 .ul_item a:active {
     color: #003f7f;
 }
-
-.active_link {
-    opacity: 0.5;
+/* Main Section */
+.main_title {
+    color: #cce5ff;
+    font-size: 6rem;
+    font-family: 'Baloo Paaji 2', cursive;
+    line-height: 100px;
+    padding-right: 200px;
 }
 
-/* Main Section */
+.main_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 690px;
+}
+
 .main_section {
     margin-top: 50px;
 }
@@ -85,15 +100,19 @@ canvas {
 
 .main_col-1 {
     width: 40%;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .main_col-2 {
+    display: flex;
+    align-items: center;
     width: 60%;
-    border: 2px solid #cce5ff;
-    border-radius: 10px;
     padding: 0 20px;
     color: #cce5ff;
+}
+
+.main_col-2 p {
+    font-size: 20px;
 }
 
 .main_photo {
@@ -103,19 +122,34 @@ canvas {
 }
 
 .main_about {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .main_map {
     width: 100%;
 }
 
-.main_col-2 p {
-    border: 2px solid #cce5ff;
-    border-radius: 10px;
-    padding: 10px;
-}
-
 .main_col-2 p a {
     color: #cce5ff;
+}
+
+.about_button {
+    background: inherit;
+    color: #cce5ff;
+    border: 2px solid #cce5ff;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.about_button:hover {
+    background: #cce5ff;
+    color: #0a0f25;
+}
+
+
+.about_p {
+    margin-bottom: 20px;
 }
