@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 .contact_box {
     color: #fff;
     display: flex;
@@ -29,6 +30,8 @@
     border-radius: 5px;
     color: #0056b3;
     border: 0;
+    font-family: 'Baloo Paaji 2', cursive;
+    font-size: 20px;
 }
 
 .contact_items textarea:focus, .contact_items input:focus {
