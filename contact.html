@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="photos/hawk-removebg-preview.png">
+    <title>Javokhir - Main</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav_box">
+            <div class="nav_col nav_col_1">
+                <a href="#"><img class="nav_img" src="./photos/hawk-removebg-preview.png" alt="rasm"></a>
+                <a class="nav_link" href="index.html">Main</a>
+                <a class="nav_link active" href="contact.html">Contact</a>
+            </div>
+            <div class="nav_col">
+                <a class="nav_link" style="margin-right: 20px;" href="#">Personal</a>
+                <img id="hide_btn" class="nav_icon" src="photos/0ae39753-7d58-44be-b20d-ff17f8954b42_removalai_preview.png" alt="rasm">
+            </div> 
+        </div>     
+    </nav>
+    <div class="nav_hidden dis_none">
+        <div class="hidden_links">
+            <div>
+              <a href="index.html">Main</a> <br>
+              <a class="active" href="contact.html">Contact</a>
+            </div>
+            <div>
+              <a href="#">Personal</a>
+            </div>
+        </div>
+        <img class="hidden_icon_2" id="hide_btn" src="photos/close.png" alt="rasm">
+    </div>  
+
+    <!-- Navbar -->
+    
+    <div class="contact_box">
+        <form id="contactForm">
+            <h2 class="contact_title">Biz bilan bog'laning </h2>
+            <div class="contact_items">
+                <label class="label" for="name">Ismingiz:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="contact_items">
+                <label class="label" for="phone">Telefon raqamingiz:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="contact_items">
+                <label class="label" for="message">Habar:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button class="contact_btn" type="submit">Yuborish</button>
+      </form>
+    </div>
+    <nav class="nav_bottom">
+      <img src="photos/hawk-removebg-preview.png" alt="rasm" width="100">
+      <div class="bottom_items">
+        <a href="#" class="bottom_item">Main</a>
+        <a href="#" class="bottom_item" style="margin-left: 25px;">Contact</a>
+        <a href="#" class="bottom_item">Personal</a>
+      </div>
+
+      <div class="bottom_items_2">
+        <a class="bottom_icon" href="#"><img src="photos/instagram.png" alt="insta"></a>
+        <a class="bottom_icon" href="#"><img src="photos/github.png" alt="github"></a>
+        <a class="bottom_icon" href="#"><img src="photos/youtube.png" alt="youtube"></a>
+      </div>
+    </nav>
+
+    <canvas id="canvas"></canvas>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+            
+            const botToken = "8107663164:AAFRS_7owwhapK9-Kch3DXAf3uqpTEuOXJE";
+            const chatId = "7761304842";
+            
+            const text = `📩 Yangi habar!%0A👤 Ism: ${name}%0A📞 Telefon: ${phone}%0A✉️ Habar: ${message}`;
+            
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${text}`;
+            
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        alert("Habar yuborildi!");
+                        document.getElementById("contactForm").reset();
+                    } else {
+                        alert("Xatolik yuz berdi, qaytadan urinib ko'ring.");
+                    }
+                })
+                .catch(error => alert("Tarmoq xatosi: " + error));
+        });
+    </script>
+</body>
+</html>

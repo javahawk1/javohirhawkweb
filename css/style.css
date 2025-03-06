@@ -20,6 +20,10 @@ canvas {
     justify-content: center;
 }
 
+.active {
+    color: #003f7f !important;
+}
+
 /* Navbar */
 .box {
     width: 70%;
@@ -152,4 +156,40 @@ canvas {
 
 .about_p {
     margin-bottom: 20px;
+}
+
+/* Nav bottom */
+.nav_bottom {
+    background: #cce5ff;
+    margin-top: 100px;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom_items {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+}
+
+.bottom_items a {
+    color:#0056b3;
+    font-weight: 600;
+}
+
+.bottom_items_2 {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    margin-top: 40px;
+}
+
+
+.bottom_icon img {
+    width: 50px;
 }

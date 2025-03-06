@@ -44,8 +44,15 @@
 }
 
 @media screen and (max-width: 800px) {
+
     .box {
         width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    #contactForm {
+        width: 70% !important;
     }
 }
 
@@ -64,9 +71,21 @@
         width: 90%;
     }
 
-    @media screen and (max-width: 600px) {
-        body {
-            overflow-x: hidden;
-        }
+    .nav_box {
+        padding: 0 !important;
+        height: 60px;
+    }
+
+    .bottom_items {
+        width: 250px;
+    }
+
+    .bottom_items_2 {
+        width: 250px;
+    }
+
+    #contactForm {
+        width: 90% !important;
     }
 }
+
