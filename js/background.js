@@ -105,30 +105,3 @@ window.addEventListener("resize", () => {
 
 createDots();
 animate();
-
-// Navbar
-
-const navbar = document.getElementById("navbar");
-const hide_btn = document.querySelectorAll("#hide_btn")
-const nav_hidden = document.querySelector(".nav_hidden")
-
-hide_btn.forEach(button => {
-    button.addEventListener("click", function() {
-        nav_hidden.classList.toggle('dis_none')
-    });
-});
-
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 1) {
-        navbar.classList.add("scrolled_1");
-    } else {
-        navbar.classList.remove("scrolled_1");
-    }
-
-    if (window.scrollY > 300) {
-        navbar.classList.add("scrolled_2");
-    } else {
-        navbar.classList.remove("scrolled_2");
-    }
-});

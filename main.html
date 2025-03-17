@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main_pc.css" media="(min-width: 769px)">
+    <link rel="stylesheet" href="./css/main_mobile.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Javokhir - Main</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav_links">
+                <a class="nav_link" href="#"><img class="nav_icon" src="./photos/hawk_photo.png" alt="hawk icon"></a>
+                <a href="#" id="main_link" class="nav_link">Main</a>
+                <a href="#" id="contact_link" class="nav_link">Contact</a>
+                <a href="#" id="personal_link" class="nav_link">Personal</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Main -->
+    <div class="container" id="main">
+        <section class="main">
+            <div class="main_content">
+                <h2 class="main_title">
+                    Hi! <br> I'm <br> Javokhir
+                </h2>
+            </div>
+        </section>
+
+        <section class="main_about">
+            <div class="main_about_content">
+                <div class="about_col">
+                    <img class="about_photo" src="../photos/unknown_photo.png" alt="javokhir_photo">
+                </div>
+                <div class="about_col">
+                    <h2 class="about_title">About me</h2>
+                    <p class="about_text">I am Javokhir, born on December 15, 2008 in Yangiyol, Tashkent region. I am a
+                        Middleware developer! I know Python, Html, Css, Js, Django, Bootstrap, Photoshop, etc.!</p>
+                    <button class="about_btn" id="contact_link">Contact</button>
+                </div>
+        </section>
+    </div>
+    <!-- Main -->
+
+
+    <!-- Contact -->
+    <div class="contact" id="contact" style="display: none;">
+        <div class="contact_box">
+            <form id="contactForm">
+                <h2 class="contact_title">Biz bilan bog'laning </h2>
+                <div class="contact_items">
+                    <label class="label" for="name">Ismingiz:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="contact_items">
+                    <label class="label" for="phone">Telefon raqamingiz:</label>
+                    <input type="number" id="phone" name="phone" required>
+                </div>
+                <div class="contact_items">
+                    <label class="label" for="message">Habar:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button class="contact_btn" type="submit">Yuborish</button>
+            </form>
+        </div>
+    </div>
+    <!-- Contact -->
+
+    <!-- Personal -->
+    <div class="personal" id="personal" style="display: none;">
+        <div class="container">
+            <div class="personal_content" id="personal_content" style="display: none;">
+                <h1 class="personal_title">Javohir Mamadiyorov Kundaligi</h1>
+                <ol class="personal_list">
+                    <li class="personal_message">
+                        <p class="personal_p">Windows iso fayl yuklash uchun 
+                            <a href="https://www.microsoft.com/en-us/software-download/windows11">havola</a>
+                            kirishda VPN kerak bolishi mumkun</p>
+                        <button class="copy_btn">📋Copy</button>
+                    </li>
+                    <li class="personal_message">
+                        <p class="personal_p">
+                            Windowsni o'rnatishda USB kerak boladi unga ISO faylni rufus orqali yuklash kerak
+                        </p> <button class="copy_btn">📋Copy</button>
+                    </li>
+                    <li class="personal_message">
+                        <p class="personal_p">
+                            rufus yuklash uchun
+                            <a href="https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6.exe">havola</a>
+                        </p> <button class="copy_btn">📋Copy</button>
+                    </li>
+                    <li class="personal_message">
+                        <p class="personal_p">
+                            Hard disk bilan ishlaydigan dastur Gparted uchun <a href="https://gparted.org/download.php">havola</a>
+                        </p> <button class="copy_btn">📋Copy</button>
+                    </li>
+                </ol>
+            </div>
+
+             <!-- Modal oynasi -->
+            <div id="modal">
+                <div class="modal-content">
+                    <h2>Parolni kiriting</h2>
+                    <input class="modal_input" type="password" id="password" placeholder="Parolni kiriting">
+                    <button class="modal_btn" onclick="checkPassword()">Kirish</button>
+                    <p class="modal_alert" id="modalAlert">Noto‘g‘ri parol!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Personal -->
+
+    <!-- Nav bottom -->
+    <nav class="nav_bottom">
+        <div class="container">
+            <div class="nav_bottom_content">
+                <div class="nav_bottom_links">
+                    <a class="nav_bottom_link" href="https://www.youtube.com/@hawkzeta">Youtube</a>
+                    <a class="nav_bottom_link" href="https://www.instagram.com/javohir.hawk/">Instagram</a>
+                    <a class="nav_bottom_link" href="https://t.me/Javokhir00">Telegram</a>
+                </div>
+                <p>By <a class="nav_bottom_link" href="https://www.instagram.com/javohir.hawk/">Javohir.Hawk</a></p>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav bottom -->
+
+    <canvas id="canvas"></canvas>
+
+    <script src="../js/background.js"></script>
+    <script src="../js/all.js"></script>
+</body>
+
+</html>

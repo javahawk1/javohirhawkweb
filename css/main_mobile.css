@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* _________________________________________________________________ */
+
+body {
+    background: #0a0f25;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Paaji 2', cursive;
+}
+
+canvas {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.container {
+    margin: 0 2%;
+}
+
+.active {
+    color: #003f7f !important;
+}
+
+/* ___________________________________________________________________ */
+
+
+.navbar {
+    background-color: #cce5ff;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+}
+
+.nav_icon {
+    width: 50px;
+}
+
+.nav_link {
+    margin: 0 5px;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.nav_link:hover {
+    color: #003f7f;
+}
+
+
+/* ___________________________________________________________________ */
+
+
+.main_about {
+    padding-top: 200px;
+    margin-bottom: 100px;
+}
+
+.main_about_content {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+
+.about_photo {
+    width: 100%;
+}
+
+.about_title {
+    color: #cce5ff;
+}
+
+.about_text {
+    margin-top: 10px;
+    color: #cce5ff;
+    font-size: 20px;
+}
+
+.about_btn {
+    background: inherit;
+    color: #cce5ff;
+    border: 2px solid #cce5ff;
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.about_photo {
+    border-radius: 50%;
+    background-color: #cce5ff;
+    display: none;
+}
+
+/* ___________________________________________________________________ */
+
+.main {
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+.main_title {
+    font-size: 70px;
+    color: #cce5ff;
+    line-height: 90px;
+}
+
+/* ___________________________________________________________________ */
+
+.nav_bottom {
+    margin-top: 100px;
+    background-color: #cce5ff;
+    padding: 10px 0;
+}
+
+.nav_bottom_link {
+    color: #0056b3;
+    font-weight: 600;
+    padding: 0 5px;
+}
+
+.nav_bottom_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ___________________________________________________________________ */
+
+
+
+.contact_box {
+    color: #cce5ff;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#contactForm {
+    width: 95%;
+}
+
+.contact_title {
+    color: #cce5ff;
+    font-size: 25px;
+}
+
+.contact_items {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_items textarea {
+    height: 200px;
+}
+
+.contact_items textarea, .contact_items input {
+    outline: none;
+    border-radius: 5px;
+    color: #0056b3;
+    border: 2px solid #0056b3;
+    font-family: 'Baloo Paaji 2', cursive;
+    line-height: 10px;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 13px;
+    background-color: inherit;
+}
+
+.contact_items textarea:focus, .contact_items input:focus {
+    box-shadow: 0 0 2px 4px #0056b3;
+}
+
+.contact_btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 2px solid #0056b3;
+    border-radius: 5px;
+    background: inherit;
+    color: #0056b3;
+    font-weight: 600;
+}
+
+.contact_btn:hover {
+    background: #0056b3;
+    color: #0a0f25;
+}
+
+/* ___________________________________________________________________ */
+
+.nav_bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #cce5ff;
+    padding: 10px 0;
+}
+
+.nav_bottom_link {
+    color: #0056b3;
+    font-weight: 600;
+    padding: 0 5px;
+}
+
+.nav_bottom_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ___________________________________________________________________ */
+
+.personal {
+    margin-top: 30px;
+}
+
+.personal_title {
+    color: #cce5ff;
+}
+
+.personal_message {
+    color: #cce5ff;
+    font-size: 20px;
+    border: 2px solid #cce5ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 10px 0;
+    position: relative;
+}
+
+.personal_p {
+    width: 90%;
+    margin-right: 10px; 
+}
+
+.personal_p * {
+    color: #cce5ff !important; 
+}
+
+.copy_btn {
+    background: inherit;
+    color: #cce5ff;
+    border: 2px solid #cce5ff;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+
+.copy_btn:hover {
+    background: #cce5ff;
+    color: #0a0f25;
+}
